@@ -1,0 +1,114 @@
+{
+  "id": "brightsmile-dental",
+  "name": "BrightSmile Dental Clinic",
+  "tagline": "Gentle, modern dentistry for the whole family",
+  "description": "BrightSmile Dental Clinic provides preventive, cosmetic and family dentistry in a calm, clinic-grade environment. From routine check-ups to smile makeovers, the team explains every option before anything is done.",
+  "category": "Dental Clinic",
+  "location": "MG Road, Bengaluru, Karnataka",
+  "phone": "+91 91234 56780",
+  "email": "care@brightsmile.example",
+  "theme": {
+    "primary": "#0d9488",
+    "primaryDark": "#115e59",
+    "accent": "#6366f1",
+    "font": "Inter"
+  },
+  "assistant": {
+    "personaName": "Pearl",
+    "greeting": "Hello, I'm Pearl, the BrightSmile Dental assistant. I can tell you about our treatments and timings, and help you send a booking enquiry to the clinic on WhatsApp.",
+    "systemGuidance": "This is a dental clinic. Never give medical or dental diagnoses, treatment recommendations for a specific condition, or pain-management advice — always say the dentist will assess during the consultation. Emergency pain or trauma should be sent to the WhatsApp/phone handoff promptly.",
+    "quickPrompts": [
+      "Do you do routine check-ups?",
+      "What's involved in a teeth whitening visit?",
+      "I have a toothache — what should I do?",
+      "I'd like to book a consultation"
+    ]
+  },
+  "services": [
+    {
+      "id": "checkup-consultation",
+      "name": "Check-up & Consultation",
+      "description": "A full oral examination with the dentist, including an assessment of your teeth and gums and advice on next steps.",
+      "duration": "30 min"
+    },
+    {
+      "id": "professional-cleaning",
+      "name": "Professional Cleaning (Scaling)",
+      "description": "Removal of plaque and tartar to keep gums healthy and breath fresh.",
+      "duration": "45 min"
+    },
+    {
+      "id": "tooth-colour-filling",
+      "name": "Tooth-Coloured Fillings",
+      "description": "Composite fillings for cavities, matched to your natural tooth shade.",
+      "duration": "30–60 min"
+    },
+    {
+      "id": "root-canal-treatment",
+      "name": "Root Canal Treatment",
+      "description": "Modern single-sitting options where clinically suitable, to save an infected tooth.",
+      "duration": "60–90 min"
+    },
+    {
+      "id": "teeth-whitening",
+      "name": "Teeth Whitening",
+      "description": "In-clinic whitening performed after a dental assessment, for a brighter smile.",
+      "duration": "60 min"
+    },
+    {
+      "id": "braces-aligners",
+      "name": "Braces & Clear Aligners",
+      "description": "Orthodontic consultation to discuss braces or aligner options for crooked or crowded teeth.",
+      "duration": "45 min consultation"
+    },
+    {
+      "id": "kids-dentistry",
+      "name": "Kids Dentistry",
+      "description": "Patient, child-friendly check-ups, sealants and fillings in a separate kids' chair.",
+      "duration": "30 min"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do I need an appointment?",
+      "answer": "Yes for most treatments — send a booking enquiry and the clinic will confirm a time. Genuine dental emergencies are seen as early as possible; call or WhatsApp the clinic straight away."
+    },
+    {
+      "question": "What are your opening hours?",
+      "answer": "We are open 9:30 AM – 7:30 PM Monday to Saturday, and 10:00 AM – 1:00 PM on Sunday."
+    },
+    {
+      "question": "Where are you located?",
+      "answer": "We're on MG Road, Bengaluru, opposite the metro exit, with lift access to the clinic."
+    },
+    {
+      "question": "Does it hurt? I'm nervous about the dentist.",
+      "answer": "The team works at your pace and explains each step. Numbing is available for injections — mention any anxiety when you enquire so the dentist can plan a comfortable visit."
+    },
+    {
+      "question": "Do you accept insurance or provide bills?",
+      "answer": "Itemised bills are provided for every treatment, and the clinic can discuss applicable insurance paperwork when you enquire."
+    },
+    {
+      "question": "How often should I get a check-up?",
+      "answer": "Most dentists recommend a routine check-up and cleaning every six months; your dentist will advise what suits you after examining your teeth."
+    }
+  ],
+  "openingHours": [
+    { "days": "Monday – Saturday", "hours": "9:30 AM – 7:30 PM" },
+    { "days": "Sunday", "hours": "10:00 AM – 1:00 PM" }
+  ],
+  "booking": {
+    "formTitle": "Send a booking enquiry",
+    "requiredFields": ["name", "phone", "service", "preferredDate", "preferredTime", "notes"],
+    "disclaimer": "This is an enquiry, not a confirmed appointment. The clinic will confirm your slot and any preparation needed on WhatsApp."
+  },
+  "whatsapp": {
+    "number": "919123456780",
+    "defaultMessage": "Hi BrightSmile Dental! I'd like to ask about booking an appointment."
+  },
+  "guardrails": [
+    "Never diagnose conditions or recommend specific treatment for a user's symptoms; the dentist assesses in person.",
+    "Never quote prices or state appointment availability."
+  ]
+}

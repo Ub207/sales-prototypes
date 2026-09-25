@@ -1,0 +1,121 @@
+{
+  "id": "ocean-massage-spa",
+  "name": "Ocean Massage & Spa",
+  "tagline": "Relax, restore, renew by the sea",
+  "description": "Ocean Massage & Spa is a seaside wellness centre offering massages, facials and body treatments in a calm, unhurried environment. Our team focuses on helping you unwind — whether you have an hour or a whole afternoon.",
+  "category": "Massage & Spa",
+  "location": "Marine Drive, Kochi, Kerala",
+  "phone": "+91 98765 43210",
+  "email": "hello@oceanmassage.example",
+  "theme": {
+    "primary": "#0e7490",
+    "primaryDark": "#164e63",
+    "accent": "#f59e0b",
+    "font": "Inter"
+  },
+  "assistant": {
+    "personaName": "Coral",
+    "greeting": "Hi, I'm Coral, the Ocean Massage & Spa assistant. Ask me about our treatments, timings, or anything else — and when you're ready, I'll help you send a booking enquiry to our team on WhatsApp.",
+    "systemGuidance": "This is a spa. Treatments are booked by appointment. Walk-ins may be accommodated when a therapist is free, but availability must be confirmed by the team — never assume a slot is open. Do not name individual therapists.",
+    "quickPrompts": [
+      "What treatments do you offer?",
+      "How long does a signature massage take?",
+      "Where are you located?",
+      "I'd like to check availability"
+    ]
+  },
+  "services": [
+    {
+      "id": "signature-ocean-massage",
+      "name": "Signature Ocean Massage",
+      "description": "Our full-body relaxation massage with flowing strokes and warm oils, designed to release everyday tension.",
+      "duration": "60 min"
+    },
+    {
+      "id": "deep-tissue-massage",
+      "description": "Focused pressure for chronic tightness in the back, shoulders and legs.",
+      "name": "Deep Tissue Massage",
+      "duration": "60–90 min"
+    },
+    {
+      "id": "aromatherapy-massage",
+      "name": "Aromatherapy Massage",
+      "description": "A gentle massage paired with essential oil blends chosen at arrival to suit your mood.",
+      "duration": "60 min"
+    },
+    {
+      "id": "hot-stone-therapy",
+      "name": "Hot Stone Therapy",
+      "description": "Heated basalt stones used alongside massage to ease deep muscle tension and improve circulation.",
+      "duration": "75 min"
+    },
+    {
+      "id": "rejuvenating-facial",
+      "name": "Rejuvenating Facial",
+      "description": "Cleanse, exfoliate and hydrate, with a facial massage and a mask matched to your skin type.",
+      "duration": "45 min"
+    },
+    {
+      "id": "body-polish",
+      "name": "Sea Salt Body Polish",
+      "description": "An exfoliating full-body polish followed by a moisturising wrap for silky, renewed skin.",
+      "duration": "60 min"
+    },
+    {
+      "id": "couples-retreat",
+      "name": "Couples Retreat",
+      "description": "A side-by-side massage experience in our private suite, finished with herbal tea.",
+      "duration": "90 min"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do I need to book in advance?",
+      "answer": "We recommend sending a booking enquiry a day or two ahead, especially for weekends and evenings. Same-day requests are sometimes possible — ask our team on WhatsApp and they will confirm."
+    },
+    {
+      "question": "What are your opening hours?",
+      "answer": "We are open 10:00 AM – 8:00 PM Monday to Saturday, and 11:00 AM – 6:00 PM on Sunday."
+    },
+    {
+      "question": "Where are you located?",
+      "answer": "We're on Marine Drive, Kochi, close to the ferry jetty, with parking nearby."
+    },
+    {
+      "question": "How do I pay?",
+      "answer": "Payment is made at the spa after your treatment. Our team can confirm the methods they accept when you enquire."
+    },
+    {
+      "question": "Are there any health considerations I should know about?",
+      "answer": "Please tell our team about pregnancy, injuries, skin conditions or medical issues when you enquire, so the therapist can adapt your treatment safely."
+    },
+    {
+      "question": "Can I cancel or reschedule?",
+      "answer": "Life happens. Just message us on WhatsApp as early as you can and our team will help you find another preferred time."
+    },
+    {
+      "question": "Do you offer gift cards?",
+      "answer": "Ask our team — gift arrangements can be discussed over WhatsApp when you send your enquiry."
+    }
+  ],
+  "openingHours": [
+    { "days": "Monday – Friday", "hours": "10:00 AM – 8:00 PM" },
+    { "days": "Saturday", "hours": "9:00 AM – 8:00 PM" },
+    { "days": "Sunday", "hours": "11:00 AM – 6:00 PM" }
+  ],
+  "booking": {
+    "formTitle": "Send a booking enquiry",
+    "requiredFields": ["name", "phone", "service", "preferredDate", "preferredTime", "notes"],
+    "disclaimer": "This is an enquiry, not a confirmed booking. Our team will check the therapist roster and confirm your slot on WhatsApp."
+  },
+  "whatsapp": {
+    "number": "919876543210",
+    "defaultMessage": "Hi Ocean Massage & Spa! I'd like to ask about booking a treatment."
+  },
+  "guardrails": [
+    "Never state or guess treatment prices, discounts or package costs — prices are confirmed by the team on WhatsApp.",
+    "Never confirm a booking, a time slot, or therapist availability. Everything is an enquiry until a human confirms it.",
+    "Never invent therapist names, staff bios, product brands, or medical claims.",
+    "Steer conversation toward WhatsApp: the assistant helps with information and prepares the enquiry handoff."
+  ]
+}

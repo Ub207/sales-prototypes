@@ -1,0 +1,7 @@
+{
+  "defaultBusiness": "ocean-massage-spa",
+  "businesses": {
+    "ocean-massage-spa": "businesses/ocean-massage-spa.json",
+    "brightsmile-dental": "businesses/brightsmile-dental.json"
+  }
+}
