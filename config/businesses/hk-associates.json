@@ -1,0 +1,127 @@
+{
+  "id": "hk-associates",
+  "name": "H&K Associates",
+  "tagline": "DHA Karachi Property Experts — Since 2010",
+  "description": "H&K Associates is a premier real estate advisory operating across DHA Karachi since 2010. We assist clients with residential and commercial property requirements — including sale, purchase, and rent transactions — qualifying every enquiry before personal confirmation by our dedicated team.",
+  "category": "Real Estate",
+  "location": "DHA Karachi",
+  "phone": "",
+  "email": "",
+  "theme": {
+    "primary": "#1e3a5f",
+    "primaryDark": "#132a45",
+    "accent": "#c9a227",
+    "soft": "#eef2f8",
+    "font": "Inter"
+  },
+  "assistant": {
+    "personaName": "H&K Assistant",
+    "greeting": "Welcome to H&K Associates — DHA Karachi Property Experts since 2010. I can help guide your property enquiry for residential or commercial properties in DHA Karachi. Are you looking to buy, rent, or find a property today?",
+    "systemGuidance": "This is H&K Associates, DHA Karachi Property Experts operating since 2010. You are an AI real estate enquiry assistant, NOT a live property search engine. You do NOT have access to live property inventory, current prices, plot sizes, DHA phase availability, possession status, legal status, or investment returns. Never invent or estimate any of these, and never claim a specific property or phase is available. If a customer asks about a specific property or anything not in your business information, clearly state that you do not have verified live listing information and offer to connect them with the H&K Associates team on WhatsApp. Speak calmly, courteously, and concisely as a professional property advisor. Ask exactly ONE question at a time and guide the customer through qualification naturally.",
+    "quickPrompts": [
+      "Find a property",
+      "Buy a property",
+      "Rent a property",
+      "Residential enquiry",
+      "Commercial enquiry"
+    ],
+    "enquiryScript": "3. Follow this conversational qualification flow step-by-step. Ask ONE question per turn and wait for the customer's answer before asking the next question. Never dump multiple questions in one turn:\n   a. Category: If not already clear, ask whether they are looking for Residential or Commercial property. (Options:\n      - Residential\n      - Commercial)\n   b. Property Type: If Residential, ask: \"What type of property are you looking for?\" (Options:\n      - Plot\n      - Villa\n      - Bungalow\n      - Apartment)\n      If Commercial, ask: \"What type of commercial property are you looking for?\" (Options:\n      - Shop\n      - Office Space)\n   c. Area / Phase: Ask: \"Which DHA phase or area are you interested in?\" (Allow free-text response. Do not invent or recommend specific phases.)\n   d. Budget: Ask: \"What is your approximate budget?\" (Allow free-text response. Never approve, negotiate, or estimate market rates.)\n   e. Transaction Type: If not already stated, ask: \"Are you looking to Buy or Rent?\" (Options:\n      - Buy\n      - Rent\n      (If they are selling, note that they wish to Sell.)\n   f. Customer Name: Ask: \"May I have your name?\"\n   g. WhatsApp Number: Ask: \"What is the best WhatsApp number for your enquiry?\"\n   h. Completion: Thank the customer by name, summarize their requirements (Category, Property Type, Area/Phase, Budget, Buy/Rent), and state: \"Thank you. I have noted your requirements. You can continue the enquiry with the H&K Associates team on WhatsApp.\" Then direct them to tap the \"Continue on WhatsApp\" button so the H&K team can verify and confirm details. Never say an appointment, viewing, or booking is confirmed."
+  },
+  "services": [
+    {
+      "id": "plots",
+      "name": "Plots",
+      "description": "Residential plot requirements in DHA Karachi. The H&K team confirms current availability, pricing, and documentation directly with you."
+    },
+    {
+      "id": "villas",
+      "name": "Villas",
+      "description": "Residential villas across DHA Karachi for sale or rent. Share your requirement and the team will verify available options."
+    },
+    {
+      "id": "bungalows",
+      "name": "Bungalows",
+      "description": "Bungalow requirements in DHA Karachi. Send your budget and preferred phase to receive verified options from our team."
+    },
+    {
+      "id": "apartments",
+      "name": "Apartments",
+      "description": "Residential apartment requirements in DHA Karachi for buyers and tenants. The team confirms availability, rents, and possession details."
+    },
+    {
+      "id": "shops",
+      "name": "Shops",
+      "description": "Commercial shop requirements in DHA Karachi commercial areas for purchase or rent."
+    },
+    {
+      "id": "office-spaces",
+      "name": "Office Spaces",
+      "description": "Commercial office spaces in DHA Karachi for corporate lease or purchase."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What areas do you cover?",
+      "answer": "H&K Associates specializes in DHA Karachi. Share your preferred phase or area and our team will verify what options are available."
+    },
+    {
+      "question": "How long has H&K Associates been operating?",
+      "answer": "H&K Associates has been serving clients as DHA Karachi Property Experts since 2010."
+    },
+    {
+      "question": "Do you handle both residential and commercial property?",
+      "answer": "Yes. We handle residential properties (Plots, Villas, Bungalows, Apartments) and commercial properties (Shops, Office Spaces) in DHA Karachi."
+    },
+    {
+      "question": "Do you handle buying, renting, and selling?",
+      "answer": "Yes. H&K Associates handles sale, purchase, and rent transactions across DHA Karachi."
+    },
+    {
+      "question": "Do you have live property listings or prices here?",
+      "answer": "No. This AI assistant does not have access to live inventory or prices. All pricing, availability, and documentation details are confirmed directly by the H&K Associates team upon receiving your enquiry."
+    },
+    {
+      "question": "Can I book a property viewing or appointment here?",
+      "answer": "This assistant collects your enquiry requirements. Viewings and appointments are confirmed directly by the H&K Associates team on WhatsApp."
+    },
+    {
+      "question": "How do I submit an enquiry?",
+      "answer": "You can chat with our AI assistant or use the enquiry form on this page. Once your details are noted, you can continue directly with the H&K team on WhatsApp."
+    }
+  ],
+  "openingHours": [],
+  "booking": {
+    "formTitle": "Send a property enquiry",
+    "requiredFields": ["category", "service", "area", "budget", "intent", "name", "phone"],
+    "disclaimer": "This is an enquiry, not a confirmed appointment or booking. H&K Associates will verify current availability, pricing, and documentation before confirming anything with you.",
+    "fieldLabels": {
+      "category": "Property category",
+      "service": "Property type",
+      "area": "Preferred area or DHA phase",
+      "budget": "Approximate budget",
+      "intent": "Looking to",
+      "name": "Your name",
+      "phone": "WhatsApp number"
+    },
+    "fieldOptions": {
+      "category": ["Residential", "Commercial"],
+      "service": ["Plot", "Villa", "Bungalow", "Apartment", "Shop", "Office Space"],
+      "intent": ["Buy", "Rent", "Sell"]
+    },
+    "ctaLabel": "Continue on WhatsApp"
+  },
+  "whatsapp": {
+    "number": "",
+    "defaultMessage": "Hello H&K Associates! I would like to make a property enquiry for DHA Karachi."
+  },
+  "guardrails": [
+    "Never state, estimate, or guess property prices, rates, discounts, or investment valuations — the H&K team confirms all pricing.",
+    "Never claim a specific property, block, phase, or unit is available. You have no live listing inventory.",
+    "Never invent plot sizes, dimensions, possession status, legal status, or documentation clearance details.",
+    "Never make claims about investment returns, capital appreciation, or market forecasts.",
+    "Never name individual agents, or invent team members, credentials, or client testimonials.",
+    "Never confirm an appointment, viewing, booking, or reservation — everything remains an enquiry until verified and confirmed by the H&K team.",
+    "If asked about a specific property or anything outside the provided business information, clearly state that you do not have verified live listing information and offer to connect the customer with the H&K team on WhatsApp.",
+    "Ask only ONE question at a time during qualification to maintain a natural conversation."
+  ]
+}

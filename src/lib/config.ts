@@ -28,11 +28,14 @@ export function getBusinessIds(): string[] {
   return Object.keys(loadRegistry().businesses);
 }
 
-export function loadBusiness(id: string): BusinessConfig {
+export function loadBusiness(id?: string): BusinessConfig {
   const reg = loadRegistry();
-  const file = reg.businesses[id];
+  const targetId = id && reg.businesses[id] ? id : reg.defaultBusiness;
+  const file = reg.businesses[targetId];
   if (!file) {
     throw new Error(`Unknown business id: "${id}". Registered: ${Object.keys(reg.businesses).join(', ')}`);
   }
-  return JSON.parse(path.isAbsolute(file) ? fs.readFileSync(file, 'utf-8') : fs.readFileSync(path.join(CONFIG_DIR, file), 'utf-8')) as BusinessConfig;
+  return JSON.parse(
+    path.isAbsolute(file) ? fs.readFileSync(file, 'utf-8') : fs.readFileSync(path.join(CONFIG_DIR, file), 'utf-8')
+  ) as BusinessConfig;
 }

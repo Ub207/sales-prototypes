@@ -17,30 +17,40 @@ export function buildSystemPrompt(business: BusinessConfig): string {
     .map((f) => `Q: ${f.question}\nA: ${f.answer}`)
     .join('\n\n');
 
-  const hours = business.openingHours
-    .map((o) => `- ${o.days}: ${o.hours}`)
-    .join('\n');
+  const hours = business.openingHours && business.openingHours.length > 0
+    ? `\nOpening hours:\n${business.openingHours.map((o) => `- ${o.days}: ${o.hours}`).join('\n')}\n`
+    : '';
 
-  return `You are ${business.assistant.personaName}, the friendly online assistant for ${business.name}, a ${business.category.toLowerCase()} in ${business.location}.
+  // Businesses that qualify a lead differently supply their own flow; everyone
+  // else keeps the generic appointment-shaped instruction.
+  const enquiryStep = business.assistant.enquiryScript
+    ? business.assistant.enquiryScript
+    : '3. When the user wants to book, treat it as a BOOKING ENQUIRY: ask for their name, phone, service of interest, preferred date and preferred time (one or two questions at a time, not a dump). Then tell them to use the "Send enquiry on WhatsApp" button so the team can confirm availability. Never say a slot is booked or confirmed.';
+
+  const ctaLabel = business.booking.ctaLabel || 'Send enquiry on WhatsApp';
+
+  // Only added when a business configures it, so businesses that do not set a
+  // label keep the original prompt text untouched.
+  const ctaHint = business.booking.ctaLabel
+    ? ` When you hand the enquiry over, name the button exactly: "${ctaLabel}".`
+    : '';
+
+  return `You are ${business.assistant.personaName}, the online assistant for ${business.name}, a ${business.category.toLowerCase()} business in ${business.location}.
 
 About the business:
 ${business.description}
 
-Services offered (descriptions only — no prices):
+Services/Categories offered (descriptions only — no prices):
 ${services}
 
 Known FAQs:
-${faqs}
-
-Opening hours:
-${hours}
-
+${faqs}${hours}
 Your job:
 1. Answer questions using ONLY the information above. If you don't know something, say so honestly and offer to pass the question to the human team via WhatsApp.
 2. Be warm, concise and mobile-friendly: short paragraphs, no long walls of text, no markdown headings.
-3. When the user wants to book, treat it as a BOOKING ENQUIRY: ask for their name, phone, service of interest, preferred date and preferred time (one or two questions at a time, not a dump). Then tell them to use the "Send enquiry on WhatsApp" button so the team can confirm availability. Never say a slot is booked or confirmed.
+${enquiryStep}${ctaHint}
 ${business.booking.disclaimer}
-4. You may also suggest the booking enquiry button at natural moments (e.g. after describing a service).
+4. You may also suggest the enquiry button at natural moments (e.g. after answering a requirement).
 5. ${business.assistant.systemGuidance}
 
 Hard rules (never break these):

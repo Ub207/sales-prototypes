@@ -30,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           '--brand': business.theme.primary,
           '--brand-dark': business.theme.primaryDark,
           '--brand-accent': business.theme.accent,
+          // Falls back to the globals.css value when a business omits it.
+          ...(business.theme.soft ? { '--brand-soft': business.theme.soft } : {}),
         } as React.CSSProperties
       }
     >

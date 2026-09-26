@@ -18,8 +18,19 @@ npm run dev                  # http://localhost:3000
 
 ## Switch the demo business
 
-Edit `config/registry.json` → set `defaultBusiness` to `"brightsmile-dental"`
-(or add your own JSON under `config/businesses/` and register it there).
+Edit `config/registry.json` → set `defaultBusiness` to any registered id:
+`"hk-associates"` (default), `"ocean-massage-spa"` or `"brightsmile-dental"`.
+Restart the dev server afterwards — the registry is cached in module state.
+
+To add a business, drop a new JSON under `config/businesses/` and register it in
+`config/registry.json`. No code changes needed: the page, chat assistant, enquiry
+form and WhatsApp handoff all read from config. Useful optional keys:
+
+- `booking.requiredFields` — which enquiry fields to show (defaults to the appointment-style six)
+- `booking.fieldLabels` / `booking.fieldOptions` — rename fields, or turn one into a dropdown
+- `assistant.enquiryScript` — override how the AI qualifies and collects a lead
+- `theme.soft` — tint for chips/pills (defaults to the `globals.css` value)
+- `whatsapp.number` — may be left empty; CTAs then show a "not available yet" state
 
 ## How it's wired
 

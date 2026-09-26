@@ -12,6 +12,7 @@
     "primary": "#0e7490",
     "primaryDark": "#164e63",
     "accent": "#f59e0b",
+    "soft": "#ecfeff",
     "font": "Inter"
   },
   "assistant": {

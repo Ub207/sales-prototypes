@@ -23,10 +23,13 @@ Requires `.env.local` with `GROQ_API_KEY` (preferred) and/or `GEMINI_API_KEY` (s
 
 The whole app is one server component tree that reads a JSON config; the only client code is the `Experience` island.
 
-**Config pipeline (server-only):**
-- `config/registry.json` maps business ids → JSON files under `config/businesses/`; `defaultBusiness` selects which one renders.
+**Business config (server-only):**
+- `config/registry.json` maps business ids → JSON files under `config/businesses/`; `defaultBusiness` selects which one renders. Note: `src/lib/config.ts` caches the registry in module state, so editing these files needs a dev-server restart.
 - `src/lib/config.ts` — reads registry + business JSON from disk with `fs`, cached in module state. Types in `src/lib/types.ts` (`BusinessConfig`).
-- Theme colors flow from config into CSS variables (`--brand`, `--brand-dark`, `--brand-accent`) set in `src/app/layout.tsx`; `globals.css` maps them into Tailwind v4 `@theme` so `bg-brand` etc. work.
+- Theme colors flow from config into CSS variables (`--brand`, `--brand-dark`, `--brand-accent`, `--brand-soft`) set in `src/app/layout.tsx`; `globals.css` maps those into Tailwind v4 `@theme` so `bg-brand` etc. work. `theme.soft` is optional and falls back to the `globals.css` value.
+- Three businesses ship: `hk-associates` (default), `ocean-massage-spa`, `brightsmile-dental`. Adding one = a new JSON + a registry line, no code changes.
+- Enquiry fields are config-driven. `booking.requiredFields` picks which fields render, `booking.fieldLabels` renames them, and `booking.fieldOptions` turns a field into a dropdown. `assistant.enquiryScript` replaces the generic "collect these details" prompt instruction for businesses that qualify a lead differently (e.g. property type → budget rather than a time slot). All optional; businesses that omit them keep the original wording.
+- `whatsapp.number` may be empty. `hasWhatsAppNumber()` guards every CTA so an unconfigured business shows a "not available yet" state instead of a broken `wa.me` link.
 
 **Chat pipeline:**
 - `src/app/api/chat/route.ts` — single POST endpoint. Validates/trims history to last 12 turns, last message must be `user`.

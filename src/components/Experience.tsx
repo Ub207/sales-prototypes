@@ -15,8 +15,8 @@ export default function Experience({ business }: { business: BusinessConfig }) {
   const [booking, setBooking] = useState<BookingContext>({});
   return (
     <>
-      <BookingForm business={business} onBookingChange={setBooking} />
-      <ChatAssistant business={business} booking={booking} />
+      <BookingForm key={`form-${business.id}`} business={business} onBookingChange={setBooking} />
+      <ChatAssistant key={`chat-${business.id}`} business={business} booking={booking} />
     </>
   );
 }
