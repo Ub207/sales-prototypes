@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { loadBusiness, getDefaultBusinessId } from '@/lib/config';
-import { askAssistant } from '@/lib/gemini';
+import { askAssistant } from '@/lib/llm';
 import type { BookingContext, ChatTurn } from '@/lib/prompt';
 
 export const maxDuration = 30;
@@ -26,9 +26,9 @@ export async function POST(req: Request) {
     const reply = await askAssistant(business, messages, body.booking);
     return NextResponse.json({ reply });
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'Unexpected error';
+    console.error('[chat] request failed:', err);
     return NextResponse.json(
-      { error: message, fallback: 'The assistant is unavailable right now. You can still send your enquiry to the team on WhatsApp.' },
+      { error: 'The assistant could not respond right now.', fallback: 'The assistant is unavailable right now. You can still send your enquiry to the team on WhatsApp.' },
       { status: 500 }
     );
   }

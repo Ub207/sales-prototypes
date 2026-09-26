@@ -2,11 +2,12 @@
   "id": "ocean-massage-spa",
   "name": "Ocean Massage & Spa",
   "tagline": "Relax, restore, renew by the sea",
-  "description": "Ocean Massage & Spa is a seaside wellness centre offering massages, facials and body treatments in a calm, unhurried environment. Our team focuses on helping you unwind — whether you have an hour or a whole afternoon.",
-  "category": "Massage & Spa",
-  "location": "Marine Drive, Kochi, Kerala",
-  "phone": "+91 98765 43210",
-  "email": "hello@oceanmassage.example",
+  "description": "Ocean Massage & Spa is a 24-hour wellness centre in DHA Phase 5, Karachi offering massages, facials and body treatments in a calm, unhurried environment. Rated 4.4 on Google across 221 reviews. Whether you have an hour or a whole night, our team is here to help you unwind.",
+  "category": "Spa",
+  "location": "Stadium Commercial Area, DHA Phase 5, Defence, Karachi",
+  "phone": "+92 311 3152222",
+  "email": "info@oceankarachispa.com",
+  "website": "https://oceankarachispa.com",
   "theme": {
     "primary": "#0e7490",
     "primaryDark": "#164e63",
@@ -15,13 +16,13 @@
   },
   "assistant": {
     "personaName": "Coral",
-    "greeting": "Hi, I'm Coral, the Ocean Massage & Spa assistant. Ask me about our treatments, timings, or anything else — and when you're ready, I'll help you send a booking enquiry to our team on WhatsApp.",
-    "systemGuidance": "This is a spa. Treatments are booked by appointment. Walk-ins may be accommodated when a therapist is free, but availability must be confirmed by the team — never assume a slot is open. Do not name individual therapists.",
+    "greeting": "Hi, I'm Coral, the Ocean Massage & Spa assistant. We're open 24 hours in DHA Phase 5, Karachi. Ask me about our treatments or anything else — and when you're ready, I'll help you send a booking enquiry to our team on WhatsApp.",
+    "systemGuidance": "This is a spa in Karachi. We are open 24 hours, but treatments are still booked by appointment and a therapist must be assigned — never assume a slot or a therapist is free. Do not name individual therapists. Do not give medical, diagnostic or medication advice; anything clinical is assessed in person by the team.",
     "quickPrompts": [
       "What treatments do you offer?",
-      "How long does a signature massage take?",
+      "Are you open right now?",
       "Where are you located?",
-      "I'd like to check availability"
+      "I'd like to book a massage tonight"
     ]
   },
   "services": [
@@ -33,8 +34,8 @@
     },
     {
       "id": "deep-tissue-massage",
-      "description": "Focused pressure for chronic tightness in the back, shoulders and legs.",
       "name": "Deep Tissue Massage",
+      "description": "Focused pressure for chronic tightness in the back, shoulders and legs.",
       "duration": "60–90 min"
     },
     {
@@ -70,16 +71,16 @@
   ],
   "faqs": [
     {
-      "question": "Do I need to book in advance?",
-      "answer": "We recommend sending a booking enquiry a day or two ahead, especially for weekends and evenings. Same-day requests are sometimes possible — ask our team on WhatsApp and they will confirm."
+      "question": "Are you open right now?",
+      "answer": "Yes — Ocean Massage & Spa is open 24 hours, every day of the week. Treatments are still booked by appointment so a therapist is assigned to you; send an enquiry and the team will confirm the nearest available slot."
     },
     {
-      "question": "What are your opening hours?",
-      "answer": "We are open 10:00 AM – 8:00 PM Monday to Saturday, and 11:00 AM – 6:00 PM on Sunday."
+      "question": "Do I need to book in advance?",
+      "answer": "We recommend sending a booking enquiry ahead, especially for late-night and weekend treatments. Same-night requests are often possible at short notice — message us on WhatsApp and the team will confirm."
     },
     {
       "question": "Where are you located?",
-      "answer": "We're on Marine Drive, Kochi, close to the ferry jetty, with parking nearby."
+      "answer": "We're in the Stadium Commercial Area, DHA Phase 5, Defence, Karachi. Search for Ocean Massage & Spa on Google Maps for directions."
     },
     {
       "question": "How do I pay?",
@@ -94,14 +95,12 @@
       "answer": "Life happens. Just message us on WhatsApp as early as you can and our team will help you find another preferred time."
     },
     {
-      "question": "Do you offer gift cards?",
-      "answer": "Ask our team — gift arrangements can be discussed over WhatsApp when you send your enquiry."
+      "question": "Do you offer gift cards or packages?",
+      "answer": "Ask our team — gift and package arrangements can be discussed over WhatsApp when you send your enquiry."
     }
   ],
   "openingHours": [
-    { "days": "Monday – Friday", "hours": "10:00 AM – 8:00 PM" },
-    { "days": "Saturday", "hours": "9:00 AM – 8:00 PM" },
-    { "days": "Sunday", "hours": "11:00 AM – 6:00 PM" }
+    { "days": "Monday – Sunday", "hours": "Open 24 hours" }
   ],
   "booking": {
     "formTitle": "Send a booking enquiry",
@@ -109,13 +108,14 @@
     "disclaimer": "This is an enquiry, not a confirmed booking. Our team will check the therapist roster and confirm your slot on WhatsApp."
   },
   "whatsapp": {
-    "number": "919876543210",
+    "number": "923113152222",
     "defaultMessage": "Hi Ocean Massage & Spa! I'd like to ask about booking a treatment."
   },
   "guardrails": [
     "Never state or guess treatment prices, discounts or package costs — prices are confirmed by the team on WhatsApp.",
     "Never confirm a booking, a time slot, or therapist availability. Everything is an enquiry until a human confirms it.",
     "Never invent therapist names, staff bios, product brands, or medical claims.",
+    "Never give medical, diagnostic or medication advice — the therapist assesses in person.",
     "Steer conversation toward WhatsApp: the assistant helps with information and prepares the enquiry handoff."
   ]
 }

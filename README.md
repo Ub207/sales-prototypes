@@ -12,7 +12,7 @@ shows reusability for a dental clinic (and by extension salons, restaurants, aca
 
 ```bash
 npm install
-cp .env.example .env.local   # add your Gemini API key from https://aistudio.google.com/apikey
+cp .env.example .env.local   # add a GROQ_API_KEY (https://console.groq.com/keys); GEMINI_API_KEY also works as a fallback
 npm run dev                  # http://localhost:3000
 ```
 
@@ -30,7 +30,7 @@ Edit `config/registry.json` → set `defaultBusiness` to `"brightsmile-dental"`
 | Typed config schema | `src/lib/types.ts` |
 | Config loader (server-side) | `src/lib/config.ts` |
 | System prompt builder (injects services/FAQs/hours/guardrails) | `src/lib/prompt.ts` |
-| Gemini call (`@google/genai`, model via `GEMINI_MODEL`) | `src/lib/gemini.ts` |
+| LLM call (Groq via OpenAI-compatible API, Gemini fallback) | `src/lib/llm.ts` |
 | Chat API route | `src/app/api/chat/route.ts` |
 | WhatsApp link + enquiry draft (client-safe) | `src/lib/whatsapp.ts` |
 | Landing page (hero, services, hours, FAQ, booking) | `src/app/page.tsx` |
